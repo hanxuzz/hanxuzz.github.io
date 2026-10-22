@@ -14,7 +14,7 @@ python3 -m http.server 8080 --bind 127.0.0.1
 ## 页面与功能
 
 - 冷蓝与暖阳首屏：日出入场、指针光线偏移、磨砂地平线。
-- 作品集：分类筛选、卡册与终端概念视觉、详情弹窗。
+- 作品集：分类筛选、真实照片卡册封面与终端概念视觉、详情弹窗。
 - 个人介绍、AI 方向、公开作品更新、GitHub 联系入口。
 - 全站快捷搜索（`⌘ K` / `Ctrl K`）、深浅主题、复制 GitHub 地址。
 - 手机适配、键盘焦点、原生对话框、减少动态效果偏好支持。
@@ -38,7 +38,7 @@ python3 -m http.server 8080 --bind 127.0.0.1
 | `updated` | 可选，`YYYY-MM-DD`，展示为公开作品更新日期 |
 
 个人介绍与品牌文案在 `index.html`；视觉在 `css/site.css`；交互在 `js/site.js`。
-作品主视觉为概念演绎，不是产品截图。新增作品时可在 `artwork()` 中扩展独立视觉。
+婚纱照闪卡封面使用项目官方示例「车顶花雨」的原片及 AI 成片，完整保留人物与车辆；其余作品主视觉为概念演绎。新增作品时可在 `artwork()` 中扩展独立视觉。
 
 ## 公开边界
 
@@ -86,3 +86,5 @@ python3 -m json.tool projects.json > /dev/null
 - AI Practitioner：2025-11-03。
 
 按用户要求，网站不展示有效期。日期以原始日期字段为准，不从到期日期倒推。
+
+婚纱照封面素材：`wedding-cards/public/demos/wedding-20-v1/{original,ghibli}/11.webp`（官方示例 official-11），本仓复制到 `assets/projects/`，通过 CSS 排版和扫光展示，不改动源照片。
