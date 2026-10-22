@@ -1,0 +1,385 @@
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/instrument-sans-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/instrument-sans-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/instrument-sans-latin-600-normal.woff2") format("woff2");
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #0c0c0a;
+  --card: #141412;
+  --line: rgba(244, 240, 232, 0.12);
+  --line-strong: rgba(244, 240, 232, 0.28);
+  --text: #f4f0e8;
+  --muted: #b0aaa0;
+  --faint: #a8a297;
+  --accent: #e7d7c1;
+  --live: #d7efe0;
+  --working: #f0e0c0;
+  --paused: #9c978e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(880px 420px at 0% 0%, rgba(231, 215, 193, 0.08), transparent 58%),
+    var(--bg);
+  color: var(--text);
+  font-family: "Instrument Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.shell {
+  width: min(960px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 80px 0 56px;
+}
+
+.skip {
+  position: absolute;
+  left: 12px;
+  top: -48px;
+  background: var(--text);
+  color: var(--bg);
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.skip:focus {
+  top: 12px;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.mark {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 18px;
+  background: rgba(231, 215, 193, 0.05);
+  color: var(--accent);
+  font-size: 30px;
+  line-height: 1;
+}
+
+h1 {
+  margin: 0;
+}
+
+.name-en {
+  display: block;
+  font-size: clamp(2.6rem, 6vw, 4.25rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+}
+
+.name-zh {
+  display: block;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+
+.lede {
+  margin: 28px 0 0;
+  max-width: 28em;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.contact {
+  margin: 20px 0 0;
+}
+
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(231, 215, 193, 0.45);
+  padding-bottom: 2px;
+}
+
+.contact a:hover {
+  border-bottom-color: var(--accent);
+}
+
+main {
+  margin-top: 80px;
+}
+
+.section-label h2 {
+  margin: 0 0 16px;
+  color: var(--faint);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 220px;
+  padding: 22px 22px 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.index {
+  margin: 0;
+  color: var(--faint);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+}
+
+.card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.pill::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.pill[data-status="已上线"] {
+  color: var(--live);
+}
+
+.pill[data-status="进行中"] {
+  color: var(--working);
+}
+
+.pill[data-status="搁置"] {
+  color: var(--paused);
+}
+
+.one-liner {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.card-meta {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stack li {
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--faint);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.links a {
+  color: var(--accent);
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.updated {
+  color: var(--faint);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.note {
+  margin: 0;
+  color: var(--muted);
+}
+
+footer {
+  margin-top: 72px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--faint);
+  font-size: 0.82rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #e7d7c1;
+  color: #1c140c;
+}
+
+@media (min-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 640px) {
+  .shell {
+    width: min(960px, calc(100% - 32px));
+    padding-top: 40px;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .mark {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    font-size: 24px;
+  }
+
+  main {
+    margin-top: 56px;
+  }
+
+  .card-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    justify-content: flex-start;
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .card {
+    transition: border-color 0.2s ease;
+  }
+}
+
+@media (hover: hover) {
+  .card:hover {
+    border-color: var(--line-strong);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card {
+    animation: rise 0.5s ease both;
+  }
+
+  .card:nth-child(2) {
+    animation-delay: 70ms;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

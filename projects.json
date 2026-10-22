@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "id": "cards",
+      "name": "寒煦｜婚纱照闪卡",
+      "one_liner": "婚纱照一键多风格做成能送能晒的卡册",
+      "status": "已上线",
+      "stack": ["Web"],
+      "links": [
+        {
+          "label": "官网",
+          "url": "https://cards.hanxu.xin"
+        }
+      ],
+      "updated": "2026-10-22"
+    },
+    {
+      "id": "kit",
+      "name": "dev-ai-kit",
+      "one_liner": "从需求记录到按步改代码的开发流程套件",
+      "status": "已上线",
+      "stack": ["Python", "AI"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/hanxuzz/dev-ai-kit"
+        }
+      ],
+      "updated": "2026-10-22"
+    }
+  ]
+}
