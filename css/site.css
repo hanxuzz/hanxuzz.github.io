@@ -1484,7 +1484,7 @@ body[data-theme=dark] .hero-foot {
 /* A quiet sunrise loop; the horizon stays still to anchor the mark. */
 @media (prefers-reduced-motion: no-preference) {
   .hanxu-mark .mark-sun { animation:mark-rise 4.8s ease-in-out infinite; }
-  .hanxu-mark .mark-rays { transform-origin:16px 20px; animation:mark-light 4.8s ease-in-out infinite; }
+  .hanxu-mark .mark-rays { transform-box:view-box; transform-origin:16px 20px; animation:mark-light 4.8s ease-in-out infinite; }
   .hanxu-mark .mark-reflection { transform-origin:16px 30px; animation:mark-water 4.8s ease-in-out infinite; }
   .brand:hover .hanxu-mark, .brand:focus-visible .hanxu-mark { transform:translateY(-2px); }
   .hanxu-mark { transition:transform .35s ease; }
@@ -1493,8 +1493,8 @@ body[data-theme=dark] .hero-foot {
     50% { transform:translateY(-1.5px); }
   }
   @keyframes mark-light {
-    0%,100% { opacity:.5; transform:scale(.9); }
-    50% { opacity:1; transform:scale(1.06); }
+    0%,100% { opacity:.65; transform:rotate(-14deg) scale(.94); }
+    50% { opacity:1; transform:rotate(14deg) scale(1.06); }
   }
   @keyframes mark-water {
     0%,100% { opacity:.4; transform:scaleX(.7); }
