@@ -1476,6 +1476,7 @@ body[data-theme=dark] .hero-foot {
 /* Hanxu's rising sun: warm light above a cool, steady horizon. */
 .hanxu-mark { display:block; width:1em; height:1em; fill:none; stroke:none; overflow:visible; }
 .hanxu-mark .mark-sun { fill:var(--accent); }
+.hanxu-mark .mark-sky { clip-path:inset(0 0 37.5% 0); transform-box:view-box; }
 .hanxu-mark .mark-rays { fill:none; stroke:var(--accent); stroke-width:2.5; stroke-linecap:round; }
 .hanxu-mark .mark-horizon { fill:var(--ink); }
 .hanxu-mark .mark-reflection { fill:var(--muted); }
@@ -1484,7 +1485,7 @@ body[data-theme=dark] .hero-foot {
 /* A quiet sunrise loop; the horizon stays still to anchor the mark. */
 @media (prefers-reduced-motion: no-preference) {
   .hanxu-mark .mark-sun { animation:mark-rise 4.8s ease-in-out infinite; }
-  .hanxu-mark .mark-rays { transform-box:view-box; transform-origin:16px 20px; animation:mark-light 4.8s ease-in-out infinite; }
+  .hanxu-mark .mark-rays { transform-box:view-box; transform-origin:16px 20px; animation:mark-light 2.4s linear infinite; }
   .hanxu-mark .mark-reflection { transform-origin:16px 30px; animation:mark-water 4.8s ease-in-out infinite; }
   .brand:hover .hanxu-mark, .brand:focus-visible .hanxu-mark { transform:translateY(-2px); }
   .hanxu-mark { transition:transform .35s ease; }
@@ -1493,8 +1494,8 @@ body[data-theme=dark] .hero-foot {
     50% { transform:translateY(-1.5px); }
   }
   @keyframes mark-light {
-    0%,100% { opacity:.65; transform:rotate(-14deg) scale(.94); }
-    50% { opacity:1; transform:rotate(14deg) scale(1.06); }
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
   }
   @keyframes mark-water {
     0%,100% { opacity:.4; transform:scaleX(.7); }
