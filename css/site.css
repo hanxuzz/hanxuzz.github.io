@@ -230,7 +230,7 @@ kbd {
   -webkit-backdrop-filter:blur(18px);
   backdrop-filter:blur(18px);
   background:linear-gradient(#d8e4ef55,#dbe5eee8 70%,var(--bg));
-  border-top:1px solid #f4f7f9b0
+  border-top:1px solid #f4f7f930
 }
 .sun-reflection {
   position:absolute;
@@ -1021,6 +1021,7 @@ dialog[open] {
   transform:translateY(0)
 }
 body[data-theme=dark] .horizon {
+  border-top-color:#d6e2eb1a;
   background:linear-gradient(#203a4d55,#162a38ef 85%)
 }
 body[data-theme=dark] .sunscape {
