@@ -301,6 +301,7 @@ kbd {
 }
 .hero-bottom {
   margin-top:35px;
+  padding-top:18px;
   display:flex;
   justify-content:space-between;
   align-items:flex-end;
