@@ -1481,11 +1481,13 @@ body[data-theme=dark] .hero-foot {
 .hanxu-mark .mark-reflection { fill:var(--muted); }
 .mini-sun .hanxu-mark { margin-left:auto; }
 
-/* A quiet sunrise loop; the horizon stays still to anchor the mark. */
+/* A single sunrise on entry or interaction, then a still mark. */
 @media (prefers-reduced-motion: no-preference) {
-  .hanxu-mark .mark-sun { animation:mark-rise 4.8s ease-in-out infinite; }
-  .hanxu-mark .mark-rays { transform-box:view-box; transform-origin:16px 20px; animation:mark-light 2.4s linear infinite; }
-  .hanxu-mark .mark-reflection { transform-origin:16px 30px; animation:mark-water 4.8s ease-in-out infinite; }
+  .hanxu-mark.is-playing .mark-sun { animation:mark-rise 2.4s ease-in-out; }
+  .hanxu-mark .mark-rays { transform-box:view-box; transform-origin:16px 20px;  }
+  .hanxu-mark.is-playing .mark-rays { animation:mark-light 2.4s linear; }
+  .hanxu-mark .mark-reflection { transform-origin:16px 30px; }
+  .hanxu-mark.is-playing .mark-reflection { animation:mark-water 2.4s ease-in-out; }
   .brand:hover .hanxu-mark, .brand:focus-visible .hanxu-mark { transform:translateY(-2px); }
   .hanxu-mark { transition:transform .35s ease; }
   @keyframes mark-rise {

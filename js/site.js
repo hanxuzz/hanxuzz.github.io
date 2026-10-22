@@ -82,4 +82,16 @@
     $('.hero').addEventListener('pointermove', e => { if (reducedMotion.matches) return; const r=$('.hero').getBoundingClientRect(); $('.sunscape').style.setProperty('--px', `${(e.clientX/r.width-.5)*25}px`); $('.sunscape').style.setProperty('--py', `${((e.clientY-r.top)/r.height-.5)*18}px`); });
     $('.hero').addEventListener('pointerleave', () => { $('.sunscape').style.setProperty('--px','0px'); $('.sunscape').style.setProperty('--py','0px'); });
   }
+  document.querySelectorAll('.hanxu-mark').forEach(mark => {
+    const play = () => {
+      if (!reducedMotion.matches) mark.classList.add('is-playing');
+    };
+    mark.addEventListener('animationend', e => {
+      if (e.animationName === 'mark-light') mark.classList.remove('is-playing');
+    });
+    const trigger = mark.closest('a') || mark;
+    trigger.addEventListener('pointerenter', play);
+    trigger.addEventListener('focus', play);
+    play();
+  });
 })();
