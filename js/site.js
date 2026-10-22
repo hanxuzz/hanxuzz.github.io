@@ -29,6 +29,7 @@
     const selected = projects.filter(p => filter === 'all' || p.category === filter);
     $('#projects').innerHTML = selected.length ? selected.map(p => `<article class="project" id="project-${escape(p.id)}"><button class="project-art ${p.id === 'dramashift' ? 'preview-drama' : p.id === 'cards' ? 'preview-cards' : 'preview-code'}" data-detail="${escape(p.id)}" aria-label="了解${escape(p.name)}"><span aria-hidden="true">${artwork(p)}<span class="art-open">↗</span></span></button><div class="project-meta"><h3>${escape(p.name)}</h3><span class="project-status" data-status="${escape(p.status)}">${escape(p.status)}</span></div><p>${escape(p.one_liner)}</p><div class="project-footer"><div class="tags">${p.stack.map(t => `<span>${escape(t)}</span>`).join('')}</div>${p.links.length ? p.links.map(l => external(l)).join('') : `<button class="text-link detail-button" data-detail="${escape(p.id)}">了解项目 <span>↗</span></button>`}</div></article>`).join('') : '<p class="empty">这个分类还没有公开作品。试试「全部作品」。</p>';
     $('#project-count').textContent = projects.length;
+    $('#projects').classList.toggle('single-project', selected.length === 1);
   }
   function openProject(id) {
     const p = projects.find(p => p.id === id); if (!p) return;
@@ -45,6 +46,10 @@
     if (!Array.isArray(data.projects)) throw new Error('format');
     projects = data.projects.map(p => ({...p, category:p.category || (p.stack?.includes('AI') ? '开源' : '产品'), stack:Array.isArray(p.stack) ? p.stack : [], links:Array.isArray(p.links) ? p.links : []}));
     renderProjects();
+    if (location.hash.startsWith('#project-')) {
+      const target = document.getElementById(location.hash.slice(1));
+      if (target) requestAnimationFrame(() => target.scrollIntoView({block:'start', behavior:'auto'}));
+    }
     $('#update-list').innerHTML = [...projects].filter(p => /^\d{4}-\d{2}-\d{2}$/.test(p.updated)).sort((a,b) => b.updated.localeCompare(a.updated)).map(p => `<article class="update-row"><time datetime="${escape(p.updated)}">${escape(p.updated.replaceAll('-','.'))}</time><div><h3>${escape(p.name)}</h3><p>${escape(p.one_liner)}</p></div><button data-detail="${escape(p.id)}" aria-label="查看${escape(p.name)}详情">↗</button></article>`).join('') || '<p class="empty">暂时没有公开更新记录。</p>';
     renderSearch();
   }).catch(() => {
@@ -52,7 +57,7 @@
     $('#retry-projects').addEventListener('click', () => location.reload());
     $('#update-list').textContent = '更新记录暂时不可用。';
   });
-  const pages = [{title:'AWS 专业级认证',url:'#certifications',keywords:'证书 云 架构 Solutions Architect DevOps Professional'},{title:'AI 学习方向',url:'#learning',keywords:'人工智能 LLM RAG Agent 大模型 学习'},{title:'作品集',url:'#works',keywords:'产品 工具 开源'},{title:'关于寒煦',url:'#about',keywords:'个人 介绍 Hanxu 大连'},{title:'最近的更新',url:'#updates',keywords:'近况 动态'},{title:'联系寒煦',url:'#contact',keywords:'GitHub 合作 联系'}];
+  const pages = [{title:'AWS 四项认证与 Credly 主页',url:'#certifications',keywords:'证书 云 架构 Solutions Architect DevOps Professional AI Practitioner Security Credly 安全'},{title:'AI 学习方向',url:'#learning',keywords:'人工智能 LLM RAG Agent 大模型 学习'},{title:'作品集',url:'#works',keywords:'产品 工具 开源'},{title:'关于寒煦',url:'#about',keywords:'个人 介绍 Hanxu 大连'},{title:'最近的更新',url:'#updates',keywords:'近况 动态'},{title:'联系寒煦',url:'#contact',keywords:'GitHub 合作 联系'}];
   function renderSearch() {
     const query = $('#search-input').value.trim().toLowerCase();
     const entries = [...pages, ...projects.map(p => ({title:p.name,url:`#project-${p.id}`,keywords:`${p.one_liner} ${p.stack.join(' ')} ${p.category} ${p.status}`,id:p.id}))].filter(p => `${p.title} ${p.keywords}`.toLowerCase().includes(query));

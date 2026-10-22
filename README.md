@@ -62,8 +62,14 @@ python3 -m json.tool projects.json > /dev/null
 
 ## 认证与学习方向
 
-`index.html` 包含 AWS Solutions Architect – Professional 与 DevOps Engineer – Professional 的认证展示，以及 AI 学习方向（LLM、RAG、Agent）。学习方向是个人计划，不代表已完成课程或取得 AI 认证。
+`index.html` 包含四项 AWS 认证展示，以及 AI 学习方向（LLM、RAG、Agent）。学习方向是个人计划，不代表已完成课程或取得 AI 认证。
 
-两枚 AWS 徽章来自本人[公开 GitHub 仓库](https://github.com/hanxuzz/hanxuzz)，保存在 `assets/certifications/`，展示链接指向原始公开资料，不作为有效期验证。未填写未经确认的获证日期、有效期或认证编号。
+四枚 AWS 徽章来自本人 [Credly 认证主页](https://www.credly.com/users/hanxu-zhao)，保存在 `assets/certifications/`；有效期以 Credly 实时记录为准。
 
 剧变（DramaShift）按本次用户指定展示为「开发中」，不提供未公开的仓库或本地试玩链接。作品介绍聚焦 AI 互动叙事，不公开内部世界包、凭证和部署信息。
+
+## 2026-10-22 认证核验与兼容性
+
+以 https://www.credly.com/users/hanxu-zhao 为公开来源，展示四项有效认证：Solutions Architect – Professional（2029-01-19）、DevOps Engineer – Professional（2026-12-22）、Security – Specialty（2027-11-19）、AI Practitioner（2028-11-03）。括号为本次核验所见有效期，不自动刷新；不重复展示已到期的旧架构师徽章。图片保存自 Credly 官方图片地址。
+
+视觉兼容：为 WebKit 增加模糊和遮罩前缀；不支持时使用实色渐层与遮罩隐藏降级；不依赖 `:has()` 处理单作品排版；视口高度保留 vh 回退。动效遵循 reduced-motion。动态作品加载后恢复项目锚点定位。
