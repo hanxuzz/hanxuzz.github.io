@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#0c0c0a"/>
-  <rect x="0.5" y="0.5" width="31" height="31" rx="7.5" fill="none" stroke="#e7d7c1" stroke-opacity="0.5"/>
-  <text x="16" y="21.5" text-anchor="middle" font-size="15" fill="#e7d7c1" font-family="serif">u</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#e1e8ef"/><circle cx="32" cy="28" r="16" fill="#ee9b62"/><path d="M8 33h48v23H8z" fill="#6f8da4" opacity=".8"/><path d="M12 39h40M16 44h32M22 49h20" stroke="#e1e8ef" stroke-width="2"/></svg>

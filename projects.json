@@ -5,26 +5,64 @@
       "name": "寒煦｜婚纱照闪卡",
       "one_liner": "婚纱照一键多风格做成能送能晒的卡册",
       "status": "已上线",
-      "stack": ["Web"],
+      "stack": [
+        "Web"
+      ],
       "links": [
         {
           "label": "官网",
           "url": "https://cards.hanxu.xin"
         }
       ],
-      "updated": "2026-10-22"
+      "updated": "2026-10-22",
+      "category": "产品",
+      "description": "把婚纱照做成可以收藏、分享的闪卡与卡册，用不同风格重新呈现值得纪念的瞬间。",
+      "highlights": [
+        "婚纱照一键转换为多种卡册风格",
+        "面向收藏、赠送和分享的使用场景"
+      ]
     },
     {
       "id": "kit",
       "name": "dev-ai-kit",
       "one_liner": "从需求记录到按步改代码的开发流程套件",
       "status": "已上线",
-      "stack": ["Python", "AI"],
+      "stack": [
+        "Python",
+        "AI"
+      ],
       "links": [
         {
           "label": "GitHub",
           "url": "https://github.com/hanxuzz/dev-ai-kit"
         }
+      ],
+      "updated": "2026-10-22",
+      "category": "开源",
+      "description": "从需求记录到按步改代码的开发流程套件。把开发过程拆成清楚的步骤，让想法、计划与实现能够连接起来。",
+      "highlights": [
+        "记录需求，整理开发思路",
+        "按步骤推进代码修改",
+        "开源代码可在 GitHub 查看"
+      ]
+    },
+    {
+      "id": "dramashift",
+      "name": "剧变 DramaShift",
+      "one_liner": "用 AI 推动故事，让每一次选择带来不同走向",
+      "status": "开发中",
+      "category": "产品",
+      "stack": [
+        "AI",
+        "互动叙事",
+        "Web"
+      ],
+      "links": [],
+      "description": "剧本既定，世事剧变。剧变是一款正在开发中的 AI 互动叙事项目，探索由 AI 担任故事主持人，让玩家通过对话与选择参与故事的发展。目前尚未开放公开体验。",
+      "highlights": [
+        "探索方向：AI 故事主持人与网状叙事",
+        "探索方向：对话、选择与剧情的动态推进",
+        "开发中，功能与体验仍在打磨"
       ],
       "updated": "2026-10-22"
     }
