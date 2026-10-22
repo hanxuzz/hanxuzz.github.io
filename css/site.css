@@ -836,7 +836,7 @@ h2 {
   transition:transform .8s
 }
 .contact:hover h2>span {
-  transform:rotate(90deg)
+  transform:translateY(-5px)
 }
 .contact-bottom {
   display:flex;
@@ -1472,3 +1472,11 @@ body[data-theme=dark] .hero-foot {
   .wedding-ai { right:5%; }
 }
 @media(prefers-reduced-motion:reduce) { .wedding-ai:after { display:none; } }
+
+/* Hanxu's rising sun: warm light above a cool, steady horizon. */
+.hanxu-mark { display:block; width:1em; height:1em; fill:none; stroke:none; overflow:visible; }
+.hanxu-mark .mark-sun { fill:var(--accent); }
+.hanxu-mark .mark-rays { fill:none; stroke:var(--accent); stroke-width:2.5; stroke-linecap:round; }
+.hanxu-mark .mark-horizon { fill:var(--ink); }
+.hanxu-mark .mark-reflection { fill:var(--muted); }
+.mini-sun .hanxu-mark { margin-left:auto; }

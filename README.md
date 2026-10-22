@@ -88,3 +88,5 @@ python3 -m json.tool projects.json > /dev/null
 按用户要求，网站不展示有效期。日期以原始日期字段为准，不从到期日期倒推。
 
 婚纱照封面素材：`wedding-cards/public/demos/wedding-20-v1/{original,ghibli}/11.webp`（官方示例 official-11），本仓复制到 `assets/projects/`，通过 CSS 排版和扫光展示，不改动源照片。
+
+品牌图标改为「暖阳与地平线」：上方暖色半圆与三道日光，下方冷色水平线，替换原放射状星芒；源文件为 `assets/hanxu-logo.svg`，页眉、首屏、联系区、页脚和 favicon 保持一致。
