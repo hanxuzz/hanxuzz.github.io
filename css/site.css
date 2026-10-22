@@ -709,6 +709,12 @@ h2 {
 }
 .art-caption { top:28px; padding-bottom:15px; border-bottom:1px solid #29495d33; }
 .art-signature { bottom:26px; padding-top:14px; border-top:1px solid #29495d33; }
+.art-cold {
+  position:absolute; top:13%; left:4%;
+  font-family:"Songti SC",STSong,serif; font-size:clamp(90px,10vw,125px);
+  font-weight:400; line-height:1; color:#486c85; opacity:.075;
+  transform:rotate(-8deg); pointer-events:none; user-select:none;
+}
 .about-ring {
   position:absolute; width:82%; aspect-ratio:1; border:1px solid #547b9255;
   border-radius:50%; top:16%; left:27%;
