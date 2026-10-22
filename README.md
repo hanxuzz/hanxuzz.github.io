@@ -15,7 +15,7 @@ python3 -m http.server 8080 --bind 127.0.0.1
 
 - 冷蓝与暖阳首屏：日出入场、指针光线偏移、磨砂地平线。
 - 作品集：分类筛选、卡册与终端概念视觉、详情弹窗。
-- 个人介绍、创作路径、公开作品更新、GitHub 联系入口。
+- 个人介绍、AI 方向、公开作品更新、GitHub 联系入口。
 - 全站快捷搜索（`⌘ K` / `Ctrl K`）、深浅主题、复制 GitHub 地址。
 - 手机适配、键盘焦点、原生对话框、减少动态效果偏好支持。
 - 字体与视觉资源全部本地提供，不依赖第三方图片或脚本。
@@ -60,9 +60,9 @@ python3 -m json.tool projects.json > /dev/null
 
 浏览器中检查：作品分类、详情关闭与 Escape、搜索匹配与空结果、主题切换、复制反馈、手机布局。
 
-## 认证与学习方向
+## 认证与个人方向
 
-`index.html` 包含四项 AWS 认证展示，以及 AI 学习方向（LLM、RAG、Agent）。学习方向是个人计划，不代表已完成课程或取得 AI 认证。
+`index.html` 包含四项 AWS 认证展示，以及用户确认的方向「用 AI 改变生活」。不推断学习阶段或能力短板。
 
 四枚 AWS 徽章来自本人 [Credly 认证主页](https://www.credly.com/users/hanxu-zhao)，保存在 `assets/certifications/`；有效期以 Credly 实时记录为准。
 
@@ -73,3 +73,5 @@ python3 -m json.tool projects.json > /dev/null
 以 https://www.credly.com/users/hanxu-zhao 为公开来源，展示四项有效认证：Solutions Architect – Professional（2029-01-19）、DevOps Engineer – Professional（2026-12-22）、Security – Specialty（2027-11-19）、AI Practitioner（2028-11-03）。括号为本次核验所见有效期，不自动刷新；不重复展示已到期的旧架构师徽章。图片保存自 Credly 官方图片地址。
 
 视觉兼容：为 WebKit 增加模糊和遮罩前缀；不支持时使用实色渐层与遮罩隐藏降级；不依赖 `:has()` 处理单作品排版；视口高度保留 vh 回退。动效遵循 reduced-motion。动态作品加载后恢复项目锚点定位。
+
+用户于 2026-10-22 澄清已具备此前被误写为学习方向的能力；页面删除推测的学习计划和创作流程，仅展示个人项目、已核验认证与「用 AI 改变生活」的目的。

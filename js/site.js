@@ -57,7 +57,7 @@
     $('#retry-projects').addEventListener('click', () => location.reload());
     $('#update-list').textContent = '更新记录暂时不可用。';
   });
-  const pages = [{title:'AWS 四项认证与 Credly 主页',url:'#certifications',keywords:'证书 云 架构 Solutions Architect DevOps Professional AI Practitioner Security Credly 安全'},{title:'AI 学习方向',url:'#learning',keywords:'人工智能 LLM RAG Agent 大模型 学习'},{title:'作品集',url:'#works',keywords:'产品 工具 开源'},{title:'关于寒煦',url:'#about',keywords:'个人 介绍 Hanxu 大连'},{title:'最近的更新',url:'#updates',keywords:'近况 动态'},{title:'联系寒煦',url:'#contact',keywords:'GitHub 合作 联系'}];
+  const pages = [{title:'AWS 四项认证与 Credly 主页',url:'#certifications',keywords:'证书 云 架构 Solutions Architect DevOps Professional AI Practitioner Security Credly 安全'},{title:'用 AI 改变生活',url:'#vision',keywords:'人工智能 AI 目的 方向 个人项目'},{title:'作品集',url:'#works',keywords:'产品 工具 开源'},{title:'关于寒煦',url:'#about',keywords:'个人 介绍 Hanxu 大连'},{title:'最近的更新',url:'#updates',keywords:'近况 动态'},{title:'联系寒煦',url:'#contact',keywords:'GitHub 合作 联系'}];
   function renderSearch() {
     const query = $('#search-input').value.trim().toLowerCase();
     const entries = [...pages, ...projects.map(p => ({title:p.name,url:`#project-${p.id}`,keywords:`${p.one_liner} ${p.stack.join(' ')} ${p.category} ${p.status}`,id:p.id}))].filter(p => `${p.title} ${p.keywords}`.toLowerCase().includes(query));
