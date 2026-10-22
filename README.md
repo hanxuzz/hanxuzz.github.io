@@ -75,3 +75,14 @@ python3 -m json.tool projects.json > /dev/null
 视觉兼容：为 WebKit 增加模糊和遮罩前缀；不支持时使用实色渐层与遮罩隐藏降级；不依赖 `:has()` 处理单作品排版；视口高度保留 vh 回退。动效遵循 reduced-motion。动态作品加载后恢复项目锚点定位。
 
 用户于 2026-10-22 澄清已具备此前被误写为学习方向的能力；页面删除推测的学习计划和创作流程，仅展示个人项目、已核验认证与「用 AI 改变生活」的目的。
+
+## 认证取得日期（2026-10-22 核对）
+
+来源：Credly 公开 JSON `https://www.credly.com/users/hanxu-zhao/badges.json` 中的 `issued_at_date` 字段。
+
+- Solutions Architect – Professional：2022-07-19，取旧徽章 `9ee66223-87f9-4427-8d30-7cac9bf0c6bd` 的首次取得日期，公开链接指向新徽章 `2e3b0192-8c63-4f5b-86f4-c29b96a4a90c`。
+- DevOps Engineer – Professional：2023-12-22。
+- Security – Specialty：2024-11-19。
+- AI Practitioner：2025-11-03。
+
+按用户要求，网站不展示有效期。日期以原始日期字段为准，不从到期日期倒推。

@@ -1446,7 +1446,7 @@ body[data-theme=dark] .hero-foot {
 @media(min-width:601px) { .project:last-child:nth-child(odd):not(:first-child) { grid-column:1 / -1; display:grid; grid-template-columns:1.15fr 1fr; column-gap:34px; align-content:center; } .project:last-child:nth-child(odd):not(:first-child) .project-art { grid-row:1 / 4; } .project:last-child:nth-child(odd):not(:first-child) .project-meta { align-self:end; } .project:last-child:nth-child(odd):not(:first-child) .project-footer { align-self:start; } }
 @media(min-width:601px) and (max-width:900px) { .drama-title { font-size:70px; top:65px; } .drama-line { top:160px; } .drama-path { bottom:60px; } }
 
-.cert-expiry { font-size:11px; color:var(--muted); margin:0 0 16px; }
+.cert-issued { font-size:11px; color:var(--muted); margin:0 0 16px; }
 .credly-profile { margin-top:18px; }
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
   .horizon { background:linear-gradient(#d8e4efcc,var(--bg)); }
