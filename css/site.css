@@ -686,56 +686,55 @@ h2 {
   align-items:center;
   padding-top:60px
 }
+/* A typographic print: cool paper, warm sun, a single oversized character. */
 .about-art {
   height:500px;
-  background:#cbd9e3;
   position:relative;
   overflow:hidden;
-  border-radius:48% 48% 3px 3px
+  isolation:isolate;
+  border-radius:4px;
+  color:#29495d;
+  background:linear-gradient(145deg,#dce7eb,#b8cedb);
+  border:1px solid #a6bccb;
+  box-shadow:12px 14px 0 var(--surface);
 }
-.about-ring {
-  position:absolute;
-  width:360px;
-  height:360px;
-  border:1px solid #8aa3b3;
-  border-radius:50%;
-  top:17%;
-  left:calc(50% - 180px)
-}
-.about-sun {
-  position:absolute;
-  width:180px;
-  height:180px;
-  background:#f6ad77;
-  border-radius:50%;
-  left:calc(50% - 90px);
-  top:26%;
-  box-shadow:0 0 70px #efb68055
-}
-.art-character {
-  position:absolute;
-  font-size:230px;
-  font-family:"Songti SC",STSong,serif;
-  font-weight:300;
-  color:#304b5e;
-  top:19%;
-  left:50%;
-  transform:translateX(-50%)
+.about-art:after {
+  content:''; position:absolute; inset:12px; border:1px solid #ffffff55;
+  pointer-events:none; z-index:3;
 }
 .art-caption,.art-signature {
-  position:absolute;
-  font-size:10px;
-  color:#405d70;
-  left:0;
-  width:100%;
-  text-align:center
+  position:absolute; left:30px; right:30px; display:flex;
+  justify-content:space-between; align-items:center;
+  font-size:9px; letter-spacing:.14em; z-index:2;
 }
-.art-caption {
-  top:35px
+.art-caption { top:28px; padding-bottom:15px; border-bottom:1px solid #29495d33; }
+.art-signature { bottom:26px; padding-top:14px; border-top:1px solid #29495d33; }
+.about-ring {
+  position:absolute; width:82%; aspect-ratio:1; border:1px solid #547b9255;
+  border-radius:50%; top:16%; left:27%;
 }
-.art-signature {
-  bottom:26px
+.about-sun {
+  position:absolute; width:60%; aspect-ratio:1; border-radius:50%;
+  left:39%; top:19%;
+  background:linear-gradient(140deg,#ffdcac 4%,#ee9865 65%,#cd663e);
+  box-shadow:0 12px 45px #d78e5233;
 }
+.art-character {
+  position:absolute; font-size:clamp(180px,19vw,240px);
+  font-family:"Songti SC",STSong,serif; font-weight:400;
+  line-height:1; top:18%; left:8%; transform:rotate(-8deg);
+  color:#29495d; text-shadow:2px 2px 0 #f7f4e04d;
+}
+.art-side-note {
+  position:absolute; right:24px; top:23%; writing-mode:vertical-rl;
+  font-size:8px; letter-spacing:.22em; z-index:2;
+}
+.art-poem {
+  position:absolute; left:30px; bottom:75px; z-index:2;
+  font-size:clamp(20px,2.5vw,32px); line-height:1.25; letter-spacing:-.04em;
+}
+.art-poem span,.art-poem em { display:block; }
+.art-poem em { font-family:Georgia,serif; font-weight:400; color:#98421f; margin-left:25px; }
 .about-copy h2 {
   margin-bottom:25px
 }
