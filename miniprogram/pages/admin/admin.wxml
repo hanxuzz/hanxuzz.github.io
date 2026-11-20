@@ -1,0 +1,39 @@
+<view class="page">
+  <view class="banner">写入只认云数据库 admins 里的 openid。这里不能把占位场次的年份加一。2027 的开球时间要等赛程公布后手填。</view>
+  <view class="meta">{{cloudLabel}}</view>
+
+  <view class="actions">
+    <button class="button" bindtap="importSeed" disabled="{{!cloudReady}}">导入本地占位底稿</button>
+    <button class="button button-plain" bindtap="createMatch" disabled="{{!cloudReady}}">新增一场</button>
+    <button class="button button-danger" bindtap="removePlaceholders" disabled="{{!cloudReady}}">删除这项占位</button>
+  </view>
+
+  <scroll-view class="chips" scroll-x show-scrollbar="{{false}}">
+    <view class="chip-row">
+      <view
+        wx:for="{{filters}}"
+        wx:key="id"
+        class="chip {{filter === item.id ? 'chip-on' : ''}}"
+        data-id="{{item.id}}"
+        bindtap="onFilter"
+      >{{item.name}}</view>
+    </view>
+  </scroll-view>
+
+  <view class="empty" wx:if="{{!rows.length}}">这一项没有场次。</view>
+  <view class="card" wx:for="{{rows}}" wx:key="matchKey">
+    <view class="card-top">
+      <text class="round">{{item.competitionName}} · {{item.round}}</text>
+      <text class="badge" wx:if="{{item.placeholder}}">{{item.badge}}</text>
+      <text class="official" wx:else>正式赛程</text>
+    </view>
+    <view class="teams">
+      <text>{{item.home}}</text>
+      <text class="vs">对</text>
+      <text>{{item.away}}</text>
+    </view>
+    <view class="kickoff">{{item.kickoffLabel}}</view>
+    <view class="venue">{{item.venueLabel}}</view>
+    <view class="row-action" data-key="{{item.matchKey}}" bindtap="editMatch">编辑</view>
+  </view>
+</view>

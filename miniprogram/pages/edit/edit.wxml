@@ -1,0 +1,54 @@
+<view class="page">
+  <view class="banner">没有把年份加一的操作。占位的开球时间必须留在 2026 年。换成正式赛程时，开球时间按公布的赛程手填。</view>
+
+  <view class="field">
+    <view class="label">赛事</view>
+    <picker class="picker" mode="selector" range="{{competitionNames}}" value="{{competitionIndex}}" bindchange="onCompetition">
+      <view>{{competitionNames[competitionIndex]}}</view>
+    </picker>
+  </view>
+  <view class="field">
+    <view class="label">赛季</view>
+    <view class="input">2027</view>
+  </view>
+  <view class="field">
+    <view class="label">轮次</view>
+    <input class="input" value="{{round}}" data-field="round" bindinput="onInput" placeholder="例如第12轮、半决赛" />
+  </view>
+  <view class="field">
+    <view class="label">主队</view>
+    <input class="input" value="{{home}}" data-field="home" bindinput="onInput" />
+  </view>
+  <view class="field">
+    <view class="label">客队</view>
+    <input class="input" value="{{away}}" data-field="away" bindinput="onInput" />
+  </view>
+  <view class="field">
+    <view class="label">开球日期</view>
+    <picker class="picker" mode="date" value="{{date}}" bindchange="onDate">
+      <view>{{date || '选择日期'}}</view>
+    </picker>
+  </view>
+  <view class="field">
+    <view class="label">开球时间</view>
+    <picker class="picker" mode="time" value="{{time}}" bindchange="onTime">
+      <view>{{time || '选择时间'}}</view>
+    </picker>
+  </view>
+  <view class="field">
+    <view class="label">场地</view>
+    <input class="input" value="{{venue}}" data-field="venue" bindinput="onInput" placeholder="没公布就留空" />
+  </view>
+  <view class="field">
+    <view class="label">正式赛程状态</view>
+    <picker class="picker" mode="selector" range="{{statusNames}}" value="{{statusIndex}}" bindchange="onStatus">
+      <view>{{statusNames[statusIndex]}}</view>
+    </picker>
+  </view>
+
+  <view class="actions">
+    <button class="button button-plain" bindtap="savePlaceholder">保存占位修正</button>
+    <button class="button" bindtap="replaceOfficial">换成正式赛程</button>
+    <button class="button button-danger" wx:if="{{oldMatchKey}}" bindtap="removeMatch">删除这场</button>
+  </view>
+</view>

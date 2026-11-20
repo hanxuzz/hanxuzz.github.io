@@ -1,0 +1,49 @@
+<view class="page">
+  <view class="hero">
+    <text class="eyebrow">大连英博</text>
+    <view class="title">2027 赛程</view>
+    <view class="banner" wx:if="{{notice}}">{{notice}}</view>
+    <view class="meta">{{sourceLabel}}</view>
+  </view>
+
+  <scroll-view class="chips" scroll-x show-scrollbar="{{false}}">
+    <view class="chip-row">
+      <view
+        wx:for="{{filters}}"
+        wx:key="id"
+        class="chip {{filter === item.id ? 'chip-on' : ''}}"
+        data-id="{{item.id}}"
+        bindtap="onFilter"
+      >{{item.name}}</view>
+    </view>
+  </scroll-view>
+
+  <view class="empty" wx:if="{{emptyNote}}">{{emptyNote}}</view>
+
+  <block wx:for="{{groups}}" wx:for-item="group" wx:key="label">
+    <view class="month">{{group.label}}</view>
+    <view
+      class="card"
+      wx:for="{{group.matches}}"
+      wx:for-item="match"
+      wx:key="matchKey"
+      data-key="{{match.matchKey}}"
+      bindtap="openDetail"
+    >
+      <view class="card-top">
+        <text class="round">{{match.competitionName}} · {{match.round}}</text>
+        <text class="badge" wx:if="{{match.placeholder}}">{{match.badge}}</text>
+        <text class="official" wx:else>正式赛程</text>
+      </view>
+      <view class="teams">
+        <text class="{{match.homeOurs ? 'ours' : ''}}">{{match.home}}</text>
+        <text class="vs">对</text>
+        <text class="{{match.awayOurs ? 'ours' : ''}}">{{match.away}}</text>
+      </view>
+      <view class="kickoff">{{match.kickoffLabel}}</view>
+      <view class="venue">{{match.venueLabel}}</view>
+    </view>
+  </block>
+
+  <view class="footer-link" bindtap="openAdmin">维护赛程</view>
+</view>

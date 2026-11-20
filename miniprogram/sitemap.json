@@ -1,0 +1,9 @@
+{
+  "desc": "大连英博赛程",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

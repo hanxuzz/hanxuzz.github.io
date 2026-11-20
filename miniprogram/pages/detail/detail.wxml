@@ -1,0 +1,20 @@
+<view class="page" wx:if="{{match}}">
+  <view class="banner" wx:if="{{match.detailNote}}">{{match.detailNote}}</view>
+  <view class="card">
+    <view class="def"><text class="def-label">赛事</text><text class="def-value">{{match.competitionName}}</text></view>
+    <view class="def"><text class="def-label">赛季</text><text class="def-value">{{match.season}}</text></view>
+    <view class="def"><text class="def-label">轮次</text><text class="def-value">{{match.round}}</text></view>
+    <view class="def"><text class="def-label">主队</text><text class="def-value">{{match.home}}</text></view>
+    <view class="def"><text class="def-label">客队</text><text class="def-value">{{match.away}}</text></view>
+    <view class="def"><text class="def-label">开球</text><text class="def-value">{{match.kickoffLabel}}</text></view>
+    <view class="def"><text class="def-label">场地</text><text class="def-value">{{match.venueLabel}}</text></view>
+    <view class="def">
+      <text class="def-label">占位</text>
+      <text class="def-value">{{match.placeholder ? match.badge : '已换成正式赛程'}}</text>
+    </view>
+  </view>
+  <view class="muted">北京时间。开球年份按记录原样显示。</view>
+</view>
+<view class="page" wx:else>
+  <view class="empty">没有找到这场比赛。</view>
+</view>

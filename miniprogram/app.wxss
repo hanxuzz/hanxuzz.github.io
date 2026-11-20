@@ -1,0 +1,234 @@
+page {
+  background: #f3f6f4;
+  color: #163246;
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+
+.page {
+  padding: 28rpx 28rpx 64rpx;
+}
+
+.hero {
+  padding: 8rpx 4rpx 12rpx;
+}
+
+.eyebrow {
+  color: #5d7380;
+  font-size: 24rpx;
+  letter-spacing: 2rpx;
+}
+
+.title {
+  margin-top: 6rpx;
+  font-size: 52rpx;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.banner {
+  margin-top: 20rpx;
+  padding: 20rpx 22rpx;
+  background: #e7f0f4;
+  border-radius: 16rpx;
+  color: #1d4a63;
+  font-size: 26rpx;
+}
+
+.meta {
+  margin-top: 14rpx;
+  color: #6b7f8a;
+  font-size: 24rpx;
+}
+
+.chips {
+  margin: 24rpx 0 8rpx;
+  white-space: nowrap;
+}
+
+.chip-row {
+  display: flex;
+}
+
+.chip {
+  margin-right: 16rpx;
+  padding: 12rpx 28rpx;
+  border-radius: 999rpx;
+  background: #fff;
+  color: #3d5563;
+  border: 1px solid #d5e1e6;
+}
+
+.chip-on {
+  background: #123246;
+  color: #fff;
+  border-color: #123246;
+}
+
+.section-note {
+  margin: 8rpx 0 16rpx;
+  color: #6b7f8a;
+  font-size: 24rpx;
+}
+
+.month {
+  margin: 28rpx 0 12rpx;
+  color: #5d7380;
+  font-size: 24rpx;
+}
+
+.card {
+  margin-bottom: 16rpx;
+  padding: 24rpx;
+  background: #fff;
+  border-radius: 18rpx;
+  border: 1px solid #e1e9ec;
+}
+
+.card-top,
+.teams,
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-top {
+  margin-bottom: 14rpx;
+}
+
+.round {
+  font-size: 24rpx;
+  color: #5d7380;
+}
+
+.badge {
+  padding: 4rpx 12rpx;
+  border-radius: 999rpx;
+  background: #f4e6c8;
+  color: #8a5a12;
+  font-size: 22rpx;
+}
+
+.official {
+  color: #3e7a62;
+  font-size: 22rpx;
+}
+
+.teams {
+  justify-content: flex-start;
+  gap: 12rpx;
+  font-size: 34rpx;
+  font-weight: 600;
+}
+
+.ours {
+  color: #0f4c6e;
+}
+
+.vs {
+  margin: 0 12rpx;
+  color: #8aa0ab;
+  font-size: 24rpx;
+  font-weight: 400;
+}
+
+.kickoff,
+.venue,
+.muted {
+  margin-top: 8rpx;
+  color: #4d6470;
+  font-size: 26rpx;
+}
+
+.empty {
+  margin-top: 28rpx;
+  padding: 36rpx 28rpx;
+  background: #fff;
+  border-radius: 18rpx;
+  color: #3d5563;
+}
+
+.footer-link {
+  margin-top: 36rpx;
+  text-align: center;
+  color: #0f4c6e;
+  font-size: 28rpx;
+}
+
+.field {
+  margin-bottom: 22rpx;
+}
+
+.label {
+  margin-bottom: 8rpx;
+  color: #5d7380;
+  font-size: 24rpx;
+}
+
+.input,
+.picker,
+.textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 18rpx 20rpx;
+  background: #fff;
+  border: 1px solid #d5e1e6;
+  border-radius: 14rpx;
+  color: #163246;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+  margin-top: 12rpx;
+}
+
+.button {
+  margin: 0;
+  background: #123246;
+  color: #fff;
+  border-radius: 14rpx;
+  font-size: 28rpx;
+  line-height: 2.6;
+}
+
+button::after {
+  border: none;
+}
+
+.button-plain {
+  background: #fff;
+  color: #123246;
+  border: 1px solid #123246;
+}
+
+.button-danger {
+  background: #fff;
+  color: #8c3a32;
+  border: 1px solid #e2c4c0;
+}
+
+.row-action {
+  margin-top: 12rpx;
+  color: #0f4c6e;
+  font-size: 24rpx;
+}
+
+.def {
+  display: flex;
+  justify-content: space-between;
+  gap: 24rpx;
+  padding: 22rpx 0;
+  border-bottom: 1px solid #e1e9ec;
+}
+
+.def-label {
+  color: #5d7380;
+  flex: none;
+}
+
+.def-value {
+  text-align: right;
+}

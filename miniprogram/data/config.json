@@ -1,0 +1,12 @@
+{
+  "defaultSeason": "2027",
+  "teamName": "大连英博",
+  "teamAliases": ["大连英博", "大连英博海发"],
+  "competitions": {
+    "csl": "中超",
+    "fa_cup": "足协杯",
+    "super_cup": "超级杯",
+    "afc": "亚冠"
+  },
+  "placeholderNotice": "2027 赛程未公布，下列场次复制自 2026，开球时间未改。"
+}

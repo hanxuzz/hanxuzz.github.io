@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/schedule/schedule",
+    "pages/detail/detail",
+    "pages/admin/admin",
+    "pages/edit/edit"
+  ],
+  "window": {
+    "navigationBarTitleText": "大连英博赛程",
+    "navigationBarBackgroundColor": "#123246",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F4F7F6",
+    "backgroundTextStyle": "dark"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
